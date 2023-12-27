@@ -16,8 +16,9 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    /* background-color: rgb(92, 28, 5); */
-    background-color: rgb(92, 28, 3);
+    overflow: hidden;
+    background-color: rgb(92, 28, 5);
+    /* background-color: rgb(92, 28, 3); */
 }
 
 .cont {
@@ -30,7 +31,7 @@ body {
     gap: 2em;
     background: rgb(4, 46, 4);
     padding: 2em;
-    overflow-y: scroll;
+    overflow-y: auto;
     /* background: rgb(49 118 61); */
 }
 
@@ -54,7 +55,7 @@ h3 {
 #board-container {
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(var(--size, 10), 1fr);
+    grid-template-columns: repeat(var(--size, 8), 1fr);
 }
 
 .cell {
@@ -187,4 +188,402 @@ img {
     width: 20%;
     transition: .3s ease-in-out;
     animation: bouge 3s linear infinite;
+}
+
+.joueur1 {
+    text-align: left;
+    background: #838282;
+    border-radius: 8px;
+    width: 100px;
+    height: max-content;
+    padding: .5em 1em;
+    color: black;
+    /* border: 5px solid black; */
+}
+
+.turn1 {
+    text-align: left;
+    background: #838282;
+    border-radius: 8px;
+    width: 100px;
+    height: max-content;
+    padding: .5em 1em;
+    color: black;
+    border: 3px solid black;
+    transform: translateY(-10px);
+    animation: pogoda 1s infinite normal linear;
+}
+
+.joueur2 {
+    text-align: left;
+    background: #838282;
+    border-radius: 8px;
+    width: 100px;
+    height: max-content;
+    padding: .5em 1em;
+    color: black;
+    /* border: 5px solid white; */
+}
+
+.turn2 {
+    text-align: left;
+    background: #838282;
+    border-radius: 8px;
+    width: 100px;
+    height: max-content;
+    padding: .5em 1em;
+    color: black;
+    border: 3px solid white;
+    transform: translateY(-10px);
+    animation: pogoda 1s infinite normal linear;
+}
+
+@keyframes pogoda {
+    0% {
+        border: 5px solid #1f1e1e86
+    }
+
+    50% {
+        border: 5px solid yellow
+    }
+
+    100% {
+        border: 5px solid #1f1e1e86
+    }
+}
+
+.innerJ {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.innerJ p {
+    color: black !important;
+}
+
+.subInnerJ1 {
+    color: black;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.bouleNoir {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background: black;
+}
+
+.bouleBlanche {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+}
+
+#sunAnimation {
+    position: absolute;
+    z-index: 0;
+    top: 400px;
+    left: -100px;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 100%;
+    overflow: hidden;
+    animation: slonce 20s infinite normal linear,
+    promienie 1s infinite;
+    box-shadow: 0 0 10px yellow;
+  }
+  
+  #moonAnimation {
+    position: absolute;
+    z-index: 0;
+    top: 100px;
+    left: 450px;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100%;
+    overflow: hidden;
+    animation: ksiezyc 20s 10s infinite normal linear;
+    opacity: 0;
+  }
+
+#roofAnimation {
+    position: absolute;
+    z-index: 2;
+    bottom: 200px;
+    left: 55px;
+    height: 0;
+    width: 0;
+    border-bottom: 140px solid green;
+    border-left: 130px solid transparent;
+    border-right: 130px solid transparent;
+    animation: dach 20s infinite normal linear;
+}
+
+#doorAnimation {
+    position: absolute;
+    z-index: 4;
+    height: 50px;
+    width: 30px;
+    left: 100px;
+    bottom: 50px;
+    background-color: black;
+    animation: drzwi 20s infinite normal linear;
+  }
+
+#windmillAnimation {
+    position: absolute;
+    z-index: 3;
+    bottom: 50px;
+    left: 85px;
+    height: 150px;
+    width: 200px;
+    background-color: #97694F;
+    animation: budynek 20s infinite normal linear;
+}
+
+#windmillPartAnimation {
+    position: absolute;
+    z-index: 2;
+    bottom: 231px;
+    left: 162px;
+    height: 45px;
+    width: 45px;
+    background-color: grey;
+    border-radius: 100%;
+    animation: kolor_korba 20s infinite normal linear;
+}
+
+.wingsAnimation {
+    position: absolute;
+    z-index: 3;
+    bottom: 220px;
+    left: 45px;
+    height: 0;
+    width: 20px;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 120px solid grey;
+    transform-origin: 100% 50%;
+}
+
+#wing1Animation {
+    animation: wiatrak 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
+}
+
+#wing2Animation {
+    animation: wiatrak1 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
+}
+
+#wing3Animation {
+    animation: wiatrak2 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
+}
+
+#wing4Animation {
+    animation: wiatrak3 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
+}
+
+
+@keyframes trawa {
+    0% {
+        background-color: #003300
+    }
+
+    50% {
+        background-color: #66cc33
+    }
+
+    100% {
+        background-color: #003300
+    }
+}
+
+@keyframes slonce {
+    0% {
+        top: 450px;
+        left: -100px;
+    }
+
+    25% {
+        top: 275px;
+        left: 300px;
+    }
+
+    50% {
+        top: 100px;
+        left: 50%;
+    }
+
+    75% {
+        top: 275px;
+        left: 1300px;
+    }
+
+    100% {
+        top: 450px;
+        left: 1900px;
+    }
+}
+
+@keyframes promienie {
+    0% {
+        box-shadow: 0 0 10px yellow;
+    }
+
+    50% {
+        box-shadow: 0 0 20px yellow;
+    }
+
+    100% {
+        box-shadow: 0 0 30px yellow;
+    }
+}
+
+@keyframes ksiezyc {
+    0% {
+        top: 450px;
+        left: -100px;
+        opacity: 0.2;
+    }
+
+    25% {
+        top: 275px;
+        left: 300px;
+        opacity: 0.6;
+    }
+
+    50% {
+        top: 100px;
+        left: 50%;
+        opacity: 1;
+    }
+
+    75% {
+        top: 275px;
+        left: 1300px;
+        opacity: 0.6;
+    }
+
+    100% {
+        top: 450px;
+        left: 1900px;
+        opacity: 0.2;
+    }
+}
+
+@keyframes wiatrak {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes wiatrak1 {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(450deg);
+    }
+}
+
+@keyframes wiatrak2 {
+    0% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(540deg);
+    }
+}
+
+@keyframes wiatrak3 {
+    0% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(630deg);
+    }
+}
+
+@keyframes kolor_wiatrak {
+    0% {
+        border-left: 120px solid #3a3a3a;
+    }
+
+    50% {
+        border-left: 120px solid #666666;
+    }
+
+    100% {
+        border-left: 120px solid #3a3a3a;
+    }
+}
+
+@keyframes kolor_korba {
+    0% {
+        background: #3a3a3a;
+    }
+
+    50% {
+        background: #666666;
+    }
+
+    100% {
+        background: #3a3a3a;
+    }
+}
+
+@keyframes budynek {
+    0% {
+        background-color: #4E2F2F
+    }
+
+    50% {
+        background-color: #97694F
+    }
+
+    100% {
+        background-color: #4E2F2F
+    }
+}
+
+@keyframes dach {
+    0% {
+        border-bottom: 140px solid #191919;
+    }
+
+    50% {
+        border-bottom: 140px solid #5f5f5f
+    }
+
+    100% {
+        border-bottom: 140px solid #191919
+    }
+}
+
+@keyframes drzwi {
+    0% {
+        background-color: #000
+    }
+
+    50% {
+        background-color: #191919
+    }
+
+    100% {
+        background-color: #000
+    }
 }

@@ -26,17 +26,41 @@
             <h1>Madj Game</h1>
             <div class="contenu-du-jeu">
                 <h3>Tour du joueur <b id="idJoueur"></b></h3>
-                <div id="board-container"></div>
-                <div id="scores">
-                    <div>
-                        <p>Black : <span id="scr-black-value"></span></p>
-                    </div>
-                    <div>
-                        <p>White : <span id="scr-white-value"></span></p>
+                <div class="tabScore">
+                    <div id="board-container"></div>
+                    <div id="scores">
+                        <div class="joueur1">
+                            <div class="innerJ">
+                                <p>Black </p>
+                                <p class="bouleNoir"></p>
+                            </div>
+                            <div class="subInnerJ1">
+                                <span id="scr-black-value"></span>
+                            </div>
+                        </div>
+                        <div class="joueur2">
+                            <div class="innerJ">
+                                <p>White </p>
+                                <p class="bouleBlanche"></p>
+                            </div>
+                            <div class="subInnerJ1">
+                                <span id="scr-white-value"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="sunAnimation"></div>
+        <div id="moonAnimation"></div>
+        <div id="roofAnimation"></div>
+        <div id="windmillAnimation"></div>
+        <div id="windmillPartAnimation"></div>
+        <div id="wing1Animation" class="wingsAnimation"></div>
+        <div id="wing2Animation" class="wingsAnimation"></div>
+        <div id="wing3Animation" class="wingsAnimation"></div>
+        <div id="wing4Animation" class="wingsAnimation"></div>
+        <div id="doorAnimation"></div>
     </div>
     <script src="script.js"></script>
 </body>

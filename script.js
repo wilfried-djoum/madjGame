@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const scoresElement = document.getElementById("scores");
     let size = prompt("Entrez la taille de la grille de jeu:");
     if (size > 2) {
-        size = parseInt(size) || 10;
+        size = parseInt(size) || 8;
     } else {
-        size = 10
+        size = 8
     }
     document.documentElement.style.setProperty('--size', size);
 
@@ -17,10 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentPlayer
     if (beginner == 0) {
         alert("le tirage aléatoire permet de nous dire que le jour qui commence est : Black")
+
         currentPlayer = "black"; // Le joueur noir commence
+        document.querySelector('.joueur1').classList.add("turn1")
+        document.querySelector('.joueur2').classList.remove("turn2")
     } else {
         alert("le tirage aléatoire permet de nous dire que le jour qui commence est : White")
         currentPlayer = "white"; // Le joueur noir commence
+
+        document.querySelector('.joueur1').classList.remove("turn1")
+        document.querySelector('.joueur2').classList.add("turn2")
     }
     document.querySelector("#idJoueur").innerHTML = currentPlayer
     let board = initializeBoard(size);
@@ -75,6 +81,13 @@ document.addEventListener("DOMContentLoaded", function () {
             board[row][col] = currentPlayer;
             checkScores(row, col);
             currentPlayer = currentPlayer === "black" ? "white" : "black";
+            if (currentPlayer == "black") {
+                document.querySelector('.joueur1').classList.add("turn1")
+                document.querySelector('.joueur2').classList.remove("turn2")
+            } else {
+                document.querySelector('.joueur1').classList.remove("turn1")
+                document.querySelector('.joueur2').classList.add("turn2")
+            }
             document.querySelector("#idJoueur").innerHTML = currentPlayer
             renderBoard();
         }
@@ -145,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contenu.style.display = "block"
         return true;
     }
-    
+
 });
 
 
