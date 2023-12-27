@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Madj Game</title>
+</head>
+
+<body>
+    <div id="afficheWiner">
+        <div class="contenu">
+            <div class="image">
+                <img src="Success factors-amico.png" alt="">
+            </div>
+            <h1 id="vainqueur"></h1>
+            <p>Score : <span id="score-value"></span></p>
+            <button onclick="fermer()">
+                <span>Fermer</span>
+            </button>
+        </div>
+    </div>
+    <div class="cont">
+        <div id="game-container">
+            <h1>Madj Game</h1>
+            <div class="contenu-du-jeu">
+                <h3>Tour du joueur <b id="idJoueur"></b></h3>
+                <div id="board-container"></div>
+                <div id="scores">
+                    <div>
+                        <p>Black : <span id="scr-black-value"></span></p>
+                    </div>
+                    <div>
+                        <p>White : <span id="scr-white-value"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
