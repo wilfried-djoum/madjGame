@@ -296,11 +296,11 @@ img {
     border-radius: 100%;
     overflow: hidden;
     animation: slonce 20s infinite normal linear,
-    promienie 1s infinite;
+        promienie 1s infinite;
     box-shadow: 0 0 10px yellow;
-  }
-  
-  #moonAnimation {
+}
+
+#moonAnimation {
     position: absolute;
     z-index: 0;
     top: 100px;
@@ -312,97 +312,6 @@ img {
     overflow: hidden;
     animation: ksiezyc 20s 10s infinite normal linear;
     opacity: 0;
-  }
-
-#roofAnimation {
-    position: absolute;
-    z-index: 2;
-    bottom: 200px;
-    left: 55px;
-    height: 0;
-    width: 0;
-    border-bottom: 140px solid green;
-    border-left: 130px solid transparent;
-    border-right: 130px solid transparent;
-    animation: dach 20s infinite normal linear;
-}
-
-#doorAnimation {
-    position: absolute;
-    z-index: 4;
-    height: 50px;
-    width: 30px;
-    left: 100px;
-    bottom: 50px;
-    background-color: black;
-    animation: drzwi 20s infinite normal linear;
-  }
-
-#windmillAnimation {
-    position: absolute;
-    z-index: 3;
-    bottom: 50px;
-    left: 85px;
-    height: 150px;
-    width: 200px;
-    background-color: #97694F;
-    animation: budynek 20s infinite normal linear;
-}
-
-#windmillPartAnimation {
-    position: absolute;
-    z-index: 2;
-    bottom: 231px;
-    left: 162px;
-    height: 45px;
-    width: 45px;
-    background-color: grey;
-    border-radius: 100%;
-    animation: kolor_korba 20s infinite normal linear;
-}
-
-.wingsAnimation {
-    position: absolute;
-    z-index: 3;
-    bottom: 220px;
-    left: 45px;
-    height: 0;
-    width: 20px;
-    border-top: 35px solid transparent;
-    border-bottom: 35px solid transparent;
-    border-left: 120px solid grey;
-    transform-origin: 100% 50%;
-}
-
-#wing1Animation {
-    animation: wiatrak 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
-}
-
-#wing2Animation {
-    animation: wiatrak1 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
-}
-
-#wing3Animation {
-    animation: wiatrak2 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
-}
-
-#wing4Animation {
-    animation: wiatrak3 20s infinite normal linear, kolor_wiatrak 20s infinite normal linear;
-}
-
-
-@keyframes trawa {
-    0% {
-        background-color: #003300
-    }
-
-    50% {
-        background-color: #66cc33
-    }
-
-    100% {
-        background-color: #003300
-    }
 }
 
 @keyframes slonce {
@@ -475,115 +384,5 @@ img {
         top: 450px;
         left: 1900px;
         opacity: 0.2;
-    }
-}
-
-@keyframes wiatrak {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes wiatrak1 {
-    0% {
-        transform: rotate(90deg);
-    }
-
-    100% {
-        transform: rotate(450deg);
-    }
-}
-
-@keyframes wiatrak2 {
-    0% {
-        transform: rotate(180deg);
-    }
-
-    100% {
-        transform: rotate(540deg);
-    }
-}
-
-@keyframes wiatrak3 {
-    0% {
-        transform: rotate(270deg);
-    }
-
-    100% {
-        transform: rotate(630deg);
-    }
-}
-
-@keyframes kolor_wiatrak {
-    0% {
-        border-left: 120px solid #3a3a3a;
-    }
-
-    50% {
-        border-left: 120px solid #666666;
-    }
-
-    100% {
-        border-left: 120px solid #3a3a3a;
-    }
-}
-
-@keyframes kolor_korba {
-    0% {
-        background: #3a3a3a;
-    }
-
-    50% {
-        background: #666666;
-    }
-
-    100% {
-        background: #3a3a3a;
-    }
-}
-
-@keyframes budynek {
-    0% {
-        background-color: #4E2F2F
-    }
-
-    50% {
-        background-color: #97694F
-    }
-
-    100% {
-        background-color: #4E2F2F
-    }
-}
-
-@keyframes dach {
-    0% {
-        border-bottom: 140px solid #191919;
-    }
-
-    50% {
-        border-bottom: 140px solid #5f5f5f
-    }
-
-    100% {
-        border-bottom: 140px solid #191919
-    }
-}
-
-@keyframes drzwi {
-    0% {
-        background-color: #000
-    }
-
-    50% {
-        background-color: #191919
-    }
-
-    100% {
-        background-color: #000
     }
 }
