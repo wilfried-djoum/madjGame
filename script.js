@@ -113,6 +113,21 @@ document.addEventListener("DOMContentLoaded", function () {
             countConsecutive(row, col, 1, 1) + countConsecutive(row, col, -1, -1) + 1,
             countConsecutive(row, col, 1, -1) + countConsecutive(row, col, -1, 1) + 1
         );
+
+        //terminer si le max est egal a la taille de la matrice
+        if (scores.black == size) {
+            document.querySelector("#score-value").innerHTML = scores.black
+            document.querySelector("#vainqueur").innerHTML = "Black"
+            filligramme.style.display = "flex"
+            contenu.style.display = "block"
+        } else if (scores.white == size) {
+            document.querySelector("#score-value").innerHTML = scores.white
+            document.querySelector("#vainqueur").innerHTML = "White"
+            filligramme.style.display = "flex"
+            contenu.style.display = "block"
+        }
+
+        //terminer si la grille est pleine
         if (isBoardFull()) {
             document.querySelector("#score-value").innerHTML = Math.max(scores.black, scores.white)
             if (scores.black == scores.white) {
