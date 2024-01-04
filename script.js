@@ -34,6 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     renderBoard();
 
+    //terminer lorsque un joueur abandonne
+    document.addEventListener("keydown", function (event) {
+        if (event.key === " " || event.key === "Spacebar" || event.keyCode === 32) {
+            abandonGame();
+        }
+    });
+
 
     // cettes fonction permet d'initialiser la grille grace a la valeur entrée dans le prompt et aussi tôt placer les pions au millieu de la matrice
     function initializeBoard(size) {
@@ -104,6 +111,20 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("Placement interdit")
         return false;
     }
+
+    function abandonGame() {
+        // Déterminez l'autre joueur comme gagnant
+        const otherPlayer = currentPlayer === "black" ? "white" : "black";
+        const valeurScore = scores[otherPlayer]
+
+        // Affichez le message d'abandon et le gagnant
+        alert(`${currentPlayer} a abandonné. ${otherPlayer} gagne !`);
+        document.querySelector("#score-value").innerHTML = valeurScore
+        document.querySelector("#vainqueur").innerHTML = otherPlayer
+        filligramme.style.display = "flex"
+        contenu.style.display = "block"
+    }
+
 
     function checkScores(row, col) {
         scores[currentPlayer] = Math.max(
