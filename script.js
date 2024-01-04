@@ -6,9 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const scoresElement = document.getElementById("scores");
     let size = prompt("Entrez la taille de la grille de jeu:");
     if (size > 2) {
-        size = parseInt(size) || 8;
+        size = parseInt(size) || 6;
     } else {
-        size = 8
+        size = 6
     }
     document.documentElement.style.setProperty('--size', size);
 
