@@ -29,7 +29,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 2em;
-    background: rgb(4, 46, 4);
+    /* background: rgb(4, 46, 4); */
+    background: linear-gradient(to right, rgb(4, 46, 4), rgb(4 46 4 / 88%)), url(Creative\ writing-pana.png);
     padding: 2em;
     overflow-y: auto;
     /* background: rgb(49 118 61); */
